@@ -1,8 +1,8 @@
 package org.softuni.car_dealer.entities;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -10,7 +10,7 @@ import java.util.List;
 public class Customer {
     private Long id;
     private String name;
-    private Date birthDate;
+    private LocalDate birthDate;
     private Boolean isYoungDriver;
 
     private List<Sale> sales;
@@ -40,11 +40,11 @@ public class Customer {
     }
 
     @Column(name = "birth_date")
-    public Date getBirthDate() {
+    public LocalDate getBirthDate() {
         return this.birthDate;
     }
 
-    public void setBirthDate(Date birthDate) {
+    public void setBirthDate(LocalDate birthDate) {
         this.birthDate = birthDate;
     }
 
